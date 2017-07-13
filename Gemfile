@@ -33,5 +33,5 @@
  
   gem 'bootstrap-sass'
   gem 'devise'
-  
+  gem 'faker'
   gem "pundit"
