@@ -19,7 +19,7 @@
  gem 'jquery-rails'
  gem 'turbolinks'
 
- gem 'figaro'
+ 
 
  group :development, :test do
    gem 'byebug'
@@ -34,3 +34,6 @@
   gem 'devise'
   gem 'faker'
   gem "pundit"
+  gem 'stripe'
+  
+  gem 'figaro', '1.0'
