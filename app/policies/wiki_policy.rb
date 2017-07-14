@@ -7,7 +7,7 @@ class WikiPolicy < ApplicationPolicy
     end
     
     def create?
-        user.admin? || user.premium?
+        user.present?
     end
     
     def new?
@@ -15,11 +15,11 @@ class WikiPolicy < ApplicationPolicy
     end
     
     def update?
-        user.present?
+        user.present? && (@wiki.user == user)
     end
     
     def edit?
-        update?
+        update? 
     end
     
     def destroy?

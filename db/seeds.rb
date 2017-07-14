@@ -1,11 +1,13 @@
-require 'faker'
+
+User.destroy_all
+Wiki.destroy_all
 
 # Create Users
 5.times do
   User.create!(
-    #name: RandomData.random_name,
-    email: RandomData.random_email,
-    password: RandomData.random_sentence
+    
+    email: Faker::Internet.email,
+    password: Faker::Internet.password
   )
 end
 
@@ -34,8 +36,8 @@ puts "#{User.count} users created"
 10.times do
   Wiki.create!(
     user: users.sample,
-    title:  RandomData.random_sentence,
-    body:   RandomData.random_paragraph
+    title:  Faker::Hacker.noun,
+    body:   Faker::Hacker.say_something_smart
   )
 end
 
