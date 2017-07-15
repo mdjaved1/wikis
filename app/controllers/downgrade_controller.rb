@@ -3,8 +3,8 @@ class DowngradeController < ApplicationController
     end
     
     def create
-        current_user.update_attribute(:standard, true)
-        current_user.update_attribute(:premium, false)
+        current_user.standard!
+        
         
         flash[:notice] = "You have successfully downgraded your account."
         
