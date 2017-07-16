@@ -21,6 +21,13 @@ unless User.find_by(email: 'admin@example.com')
   )
 end
 
+ premium = User.create!(
+    email:    'premium@example.com',
+    password: 'helloworld',
+    role:     'premium'
+  )
+
+
 unless User.find_by(email: 'member@example.com')
   User.create!(
     #name: 'Member User',

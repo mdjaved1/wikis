@@ -4,7 +4,7 @@ class DowngradeController < ApplicationController
     
     def create
         current_user.standard!
-        
+        current_user.going_public
         
         flash[:notice] = "You have successfully downgraded your account."
         
