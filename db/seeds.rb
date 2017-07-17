@@ -5,7 +5,6 @@ Wiki.destroy_all
 # Create Users
 5.times do
   User.create!(
-    
     email: Faker::Internet.email,
     password: Faker::Internet.password
   )
@@ -14,10 +13,8 @@ end
 # Create admin user
 unless User.find_by(email: 'admin@example.com')
   User.create!(
-    #name: 'Admin User',
     email: 'admin@example.com',
     password: 'helloworld',
-    #role: 'admin'
   )
 end
 
@@ -25,7 +22,7 @@ end
     email:    'premium@example.com',
     password: 'helloworld',
     role:     'premium'
-  )
+)
 
 
 unless User.find_by(email: 'member@example.com')
